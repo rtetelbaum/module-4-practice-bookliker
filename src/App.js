@@ -9,6 +9,7 @@ import {
 } from "semantic-ui-react";
 import TitleComponent from './TitleComponent';
 import UserComponent from './UserComponent'
+import TitlesContainer from './TitlesContainer'
 
 class App extends React.Component {
 	
@@ -70,9 +71,7 @@ class App extends React.Component {
 					<Menu.Item header>Bookliker</Menu.Item>
 				</Menu>
 				<main>
-					<Menu vertical inverted>
-						{books}
-					</Menu>
+					<TitlesContainer books={this.state.books} handleTitleClick={this.handleTitleClick}/>
 					<Container text>
 						<Header>{currentBook.title}</Header>
 						<Image
